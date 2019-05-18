@@ -34,6 +34,10 @@ class ItunesService {
   addSubscriber(prop, fn) {
     _subscribers[prop].push(fn)
   }
+
+  reset() {
+    _state = {}
+  }
 }
 
 

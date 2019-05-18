@@ -17,7 +17,7 @@ export default class Song {
                 <div class="card-body">
                     <h5 class="card-title">${this.title}</h5>
                     <p class="card-text"><b>Artist Name:</b> ${this.artist}</p>
-                    <audio controls style="width: 200px;"src="${this.preview}"></audio>
+                    <audio controls style="width: 200px;"src="${this.preview}">${this.title}</audio>
                     <p class="card-text">Album Title: ${this.collection}</p>
                     <p class="card-text">Album Price: ${this.price}</p>
                 </div>

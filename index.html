@@ -14,34 +14,19 @@
 </head>
 
 <body>
-    <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)">
-        <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
-        <div class="form-group">
-            <input type="text" class="form-control" name="artist" placeholder="Artist Name" />
-            <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
-        </div>
-    </form>
-    <div>
-        <div class="col-12">
-            <h1>Showing
-                <!--number of results--> for:
-                <!--artist searched-->
-            </h1>
-        </div>
-    </div>
-    <div id="songs" class="row">
-        <!-- <div class="col-sm-4">
-            <div class="card">
-                <img class="card-img-top" src=${this.albumArt} alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">${this.title}</h5>
-                    <p class="card-text">Artist Name: ${this.artist}</p>
-                    <audio controls src="${this.preview}"></audio>
-                    <p class="card-text">${this.collection}</p>
-                    <p class="card-text">${this.price}</p>
-                </div>
+    <nav class="navbar navbar-light bg-light justify-content-between">
+        <a class="navbar-brand">Search It!</a>
+        <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)"
+            onreset="app.controllers.itunesCtrl.reset(event)">
+            <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
+            <div class="form-group">
+                <input type="text" class="form-control" name="artist" placeholder="Artist Name" id="artist-name" />
+                <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
+                <button type="reset" class="btn btn-danger" id="clear-results">Clear Search</button>
             </div>
-        </div> -->
+        </form>
+    </nav>
+    <div id="songs" class="row">
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="module" src="app/main.js"></script>
