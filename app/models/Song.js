@@ -10,22 +10,19 @@ export default class Song {
     }
 
     get foundTemplate() {
-        return `<div class="row">
-            <div class="col-12">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src=${this.albumArt} alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">${this.title}</h5>
-                            <p class="card-text">Artist Name: ${this.artist}</p>
-                             <audio controls src="${this.preview}"></audio>
-                        </div>
-                </div>
+        return `
+           <div class="col-sm-4">
+            <div class="card">
+                <img class="card-img-top" src=${this.albumArt} alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">${this.title}</h5>
+                    <p class="card-text"><b>Artist Name:</b> ${this.artist}</p>
+                    <audio controls style="width: 200px;"src="${this.preview}"></audio>
+                    <p class="card-text">Album Title: ${this.collection}</p>
+                    <p class="card-text">Album Price: ${this.price}</p>
                 </div>
             </div>
-        `
-        // return `Song Name: ${this.title}` + `Album: ${this.albumArt}`
+        </div>
+    `
     }
 }
-// return `
-//     <li>${this.description}<button onclick="app.controllers.orderController.serveFood(${this.id})">Serve Food</button></li>
-    //     

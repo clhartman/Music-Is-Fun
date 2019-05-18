@@ -3,11 +3,8 @@ import ItunesService from "./itunes-service.js";
 const _itunesService = new ItunesService()
 
 function _drawSongs() {
-  //get a copy of the itunes-service
   let songs = _itunesService.Songs
-  //create song layout
   let template = ''
-  //put the songs on the DOM
   for (let i = 0; i < songs.length; i++) {
     let song = songs[i];
     template += song.foundTemplate
