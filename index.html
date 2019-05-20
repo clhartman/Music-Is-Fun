@@ -14,20 +14,22 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light justify-content-between">
-        <a class="navbar-brand">Search It!</a>
+    <nav class="navbar navbar-light bg-light justify-content-start">
+        <a class="navbar-brand">Music Search</a>
         <form class="form-inline" onsubmit="app.controllers.itunesCtrl.getMusic(event)"
             onreset="app.controllers.itunesCtrl.reset(event)">
             <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
             <div class="form-group">
                 <input type="text" class="form-control" name="artist" placeholder="Artist Name" id="artist-name" />
-                <button type="submit" class="btn btn-primary" id="get-music-button">Get Music</button>
-                <button type="reset" class="btn btn-danger" id="clear-results">Clear Search</button>
+                <button type="submit" class="btn btn-outline-dark" id="get-music-button">Get Music</button>
+                <button type="reset" class="btn btn-outline-danger" id="clear-results">Clear Search</button>
             </div>
         </form>
     </nav>
-    <div id="songs" class="row">
-    </div>
+    <main class="container">
+        <div id="songs" class="row song-return">
+        </div>
+    </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="module" src="app/main.js"></script>
 </body>

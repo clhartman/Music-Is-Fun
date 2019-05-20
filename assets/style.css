@@ -1,4 +1,21 @@
 body {
-  background-color: #555555;
-  padding: 15px
+  background-color: black;
+  padding: 15px;
+  background-image: url("music.jpg");
+  background-repeat: no-repeat;
+  background-size: 1000px 800px;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.col-sm-4 {
+  padding-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.card-body {
+  background-color: #b6b6b6;
 }
